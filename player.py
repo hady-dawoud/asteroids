@@ -1,6 +1,6 @@
 import pygame
 from circleshape import CircleShape, PLAYER_RADIUS
-from constants import PLAYER_TURN_SPEED, PLAYER_SPEED
+from constants import PLAYER_TURN_SPEED, PLAYER_SPEED, LINE_WIDTH
  
 
 class Player(CircleShape):
@@ -17,7 +17,7 @@ class Player(CircleShape):
         return [a, b, c]
 
     def draw(self, screen):
-        pygame.draw.polygon(screen, "white", self.triangle())
+        pygame.draw.polygon(screen, "white", self.triangle(), LINE_WIDTH)
 
     def rotate(self, dt):
         self.rotation += PLAYER_TURN_SPEED * dt
