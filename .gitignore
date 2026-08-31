@@ -3,3 +3,4 @@ game_state.jsonl
 .python-version
 pyproject.toml
 uv.lock
+game_events.jsonl
